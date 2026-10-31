@@ -1,4 +1,3 @@
-
 # Global E-Commerce Sales Analysis
 
 **WE INTERN — Week 1 Data Science Project**
@@ -15,6 +14,17 @@ This project analyzes a Global E-Commerce Sales dataset using Python. It covers 
 - Analyze product categories, products, regions, monthly sales, and customer segments.
 - Create charts and a dashboard mockup.
 - Document business insights and recommendations.
+
+## Key Steps Performed
+
+1. Inspected the original e-commerce dataset.
+2. Checked missing values and duplicate records.
+3. Cleaned and validated the dataset using Python and Pandas.
+4. Calculated key sales performance indicators.
+5. Analyzed category, product, regional, monthly, and customer-segment performance.
+6. Created bar, line, and pie charts.
+7. Designed a sales dashboard mockup.
+8. Documented business insights and recommendations.
 
 ## Dataset
 
@@ -35,6 +45,16 @@ This project analyzes a Global E-Commerce Sales dataset using Python. It covers 
 | Total Profit | 158,872.32 |
 
 *Note: The dataset does not specify a currency unit.*
+
+## Major Findings
+
+- Furniture generated the highest category revenue of 256,274.68.
+- Standing Desk Converter was the highest revenue-generating product, with 46,614.22.
+- Europe recorded the highest regional revenue of 137,006.20.
+- North America recorded the highest number of regional orders, with 578.
+- The Consumer segment generated the highest revenue of 256,287.74.
+- June 2025 recorded the highest monthly revenue of 18,068.09.
+- A total of 272 records had negative profit and were retained for further analysis.
 
 ## Tools and Technologies
 
@@ -104,17 +124,26 @@ Run the cleaning script before the analysis scripts if you need to regenerate th
 
 The `outputs/` folder contains:
 
-1. Revenue by Product Category — bar chart.
-2. Monthly Sales Trend — line chart.
-3. Revenue Share by Category — pie chart.
-4. Dashboard Mockup — sales KPIs, category revenue, monthly trends, and regional revenue.
+1. **Revenue by Product Category** — Bar chart.
+2. **Monthly Sales Trend** — Line chart.
+3. **Revenue Share by Category** — Pie chart.
+4. **Dashboard Mockup** — Sales KPIs, category revenue, monthly trends, and regional revenue.
 
 ## Documentation
 
-- `cleaning_report.md` — data cleaning and validation decisions.
-- `business_insights.md` — business observations and recommendations.
-- `final_analytical_report.md` — complete analytical report.
+- `cleaning_report.md` — Data cleaning and validation decisions.
+- `business_insights.md` — Business observations and recommendations.
+- `final_analytical_report.md` — Complete analytical report.
 
 ## Conclusion
 
 This project demonstrates a basic data science workflow, from inspecting and preparing data to analyzing sales performance and communicating findings through charts and reports.
+
+The analysis identified Furniture as the leading category by revenue, Europe as the leading region by revenue, and Consumer as the leading customer segment by revenue.
+
+The resulting dataset, charts, dashboard, and reports provide a foundation for further business analysis and decision-making.
+
+## Author Details
+
+- **GitHub Username:** [adityamishra0411](https://github.com/adityamishra0411)
+- **GitHub Repository:** [Global E-Commerce Sales Analysis](https://github.com/adityamishra0411/data-science-week1)

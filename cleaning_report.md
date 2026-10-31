@@ -13,6 +13,29 @@
 The original dataset contains 2,000 rows and 15 columns covering order details, customer information, product categories, quantities, prices, discounts, sales, shipping costs, profit, and payment methods.
 
 The original dataset has been preserved separately from the cleaned dataset.
+### Dataset Column Classification
+
+The dataset contains 15 columns, classified into the following data types:
+
+| Column Name | Data Type | Description |
+|---|---|---|
+| Order_ID | Identifier (String) | Unique order identifier |
+| Order_Date | Date | Date of the order |
+| Customer_Name | Text | Customer name |
+| Customer_Segment | Categorical | Customer segment |
+| Country | Categorical | Country information |
+| Region | Categorical | Sales region |
+| Product_Category | Categorical | Product category |
+| Product_Name | Categorical | Product name |
+| Quantity | Integer | Number of units ordered |
+| Unit_Price | Float | Price per unit |
+| Discount_Percent | Integer | Discount percentage |
+| Total_Sales | Float | Total sales amount |
+| Shipping_Cost | Float | Shipping cost |
+| Profit | Float | Profit amount |
+| Payment_Method | Categorical | Payment method used |
+
+**Note:** In the original CSV file, `Order_Date` is stored as a string. It was converted to a datetime data type during the cleaning process.
 
 ## 3. Missing Value Analysis
 
@@ -28,21 +51,69 @@ The initial inspection identified zero fully duplicated rows. Further validation
 
 ## 5. Data Validation
 
-The following checks were performed:
+A comprehensive validation process was performed on the cleaned dataset.
+
+### Validation Results
 
 | Validation Check | Result |
 |---|---:|
+| Total records | 2,000 |
+| Total columns | 15 |
+| Missing required columns | 0 |
+| Missing values | 0 |
+| Blank text values | 0 |
+| Leading/trailing whitespace values | 0 |
+| Fully duplicated rows | 0 |
+| Repeated Order IDs | 0 |
 | Invalid order dates | 0 |
+| Non-numeric values in numeric columns | 0 |
 | Quantity less than or equal to zero | 0 |
 | Unit price less than or equal to zero | 0 |
 | Discounts outside 0–100% | 0 |
-| Blank text values | 0 |
-| Repeated Order IDs | 0 |
 | Sales formula mismatches (tolerance 0.02) | 0 |
+| Rows not comparable for sales formula | 0 |
+| Category/text formatting inconsistencies | 0 |
+| Unexpected product categories | 0 |
+
+### Category Consistency
+
+The following categorical columns were reviewed:
+
+- Customer_Segment
+- Country
+- Region
+- Product_Category
+- Product_Name
+- Payment_Method
+
+No leading/trailing whitespace or capitalization inconsistencies were detected in these columns.
+
+All four expected product categories were found:
+
+- Furniture
+- Technology
+- Clothing & Accessories
+- Office Supplies
+
+No unexpected product categories were identified.
+
+### Date and Numeric Validation
+
+No invalid order dates or non-numeric values were detected.
+
+All quantity, unit price, and discount validation checks passed.
+
+### Sales Formula Validation
 
 The Total_Sales values matched the expected calculation within a tolerance of 0.02:
 
-Quantity × Unit Price × (1 − Discount Percent / 100)
+`Total_Sales = Quantity × Unit_Price × (1 − Discount_Percent / 100)`
+
+No formula mismatches were found.
+
+### Delivery Status
+
+Delivery Status standardization was not applicable because the dataset does not contain a Delivery_Status column.
 
 ## 6. Negative Profit Review
 
